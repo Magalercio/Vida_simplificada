@@ -1,0 +1,464 @@
+/* Reset de estilos e centralização geral */
+body {
+    
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container1 {
+     /* Fundo branco para o conteúdo */
+    width: 80%;
+    max-width: 1200px; /* Define um máximo de largura para o conteúdo */
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 8px; /* Borda arredondada para o conteúdo */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra para destacar o conteúdo */
+}
+
+span {
+    color: #36717C;/* #DBA518;*/
+
+}
+
+.button-container {
+    text-align: center; /* Centraliza horizontalmente o conteúdo dentro do .button-container */
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Espaçamento superior */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: bottom; /* Centraliza verticalmente */
+}
+
+.button1 {
+    padding: 10px 20px;
+    background-color: #9FF82C !important;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none; 
+    transition: background-color 0.3s ease;
+    border-radius: 15px!important;
+    font-weight: bold !important;
+    transform: scale(1.0);
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.4));
+    
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.0); /* Escala inicial */
+    }
+    50% {
+        transform: scale(1.1); /* Escala máxima */
+    }
+    100% {
+        transform: scale(1.0); /* Escala de volta ao tamanho original */
+    }
+}
+
+.button1.pulse-animation {
+    animation: pulse 1s infinite paused;
+}
+
+.button1:hover {
+    animation-play-state: running; /* Inicia a animação quando o mouse está sobre o botão */
+}
+
+
+.card1 {
+    display: inline-block; /* Faz com que o card ocupe apenas o espaço necessário */
+    border: 3px solid #DBA518; /* Apenas para visualização, pode ajustar conforme necessário */
+    padding: 10px; /* Espaçamento interno do card */
+    margin: 0 auto; /* Centraliza o card, se necessário */
+    max-width: fit-content; 
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+.card2 {
+    
+    border-radius: 10px; /* Cantos arredondados */
+    
+    padding:  10px 0px; /* Espaçamento interno */
+    
+}
+
+.resposta {
+    position: relative;
+    display: none; /* Esconde a resposta por padrão */
+    
+    color: #fff; /* Ajuste a cor do texto conforme necessário */
+    border: none;
+}
+
+.resposta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #36717C;
+    opacity: 0.5;
+    z-index: -1; /* Garante que o pseudo-elemento fique atrás do texto */
+}
+
+.pergunta {
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    color: #ffffff; /* Cor da pergunta */
+    background-color: #36717C;
+    border: none;
+    text-align: left;
+}
+
+.pergunta:hover {
+    text-decoration: none; /* Adiciona um efeito ao passar o mouse */
+}
+
+.seta {
+    margin-right: 10px; /* Espaço entre a seta e o texto */
+    padding-left: 10px;
+    color:#DBA518 !important;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* video */
+.video-placeholder {
+    position: relative;
+    max-width: 60%;
+    margin: 0 auto; /* Centraliza o vídeo e o overlay */
+    z-index: 1;
+}
+
+#videoPlayer {
+    width: 100%;
+}
+
+#videoProgress {
+    width: 100%;
+}
+
+#overlayImage, #overlayImage2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; 
+    opacity: 0.9;
+    pointer-events: none; /* Para permitir interação com o vídeo subjacente */
+    display: block; /* Mostra o overlay inicialmente */
+    
+}
+
+.video-placeholder video {
+    display: block; /* Garante que o vídeo seja tratado como um bloco */
+    width: 100%; /* Define a largura do vídeo como 100% do seu contêiner */
+    height: auto; /* Altura automática para manter a proporção original do vídeo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 6px 20px rgba(0, 0, 0, 0.8), 0 -4px 20px rgba(0, 0, 0, 0.6); /* Adiciona uma sombra ao vídeo */
+    z-index: 1; /* Garante que o vídeo esteja acima do pseudo-elemento */
+}
+
+/* FONTES */
+
+html {
+    font-size: 15px; /* Ajuste este valor conforme necessário */
+}
+
+
+h1, h2, h3 {
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+h4, h5, h6, li {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+ /* Estilos para a parte A e parte B */
+ .parteA {
+    flex: 1;
+    padding: 10px;
+    z-index: 1;
+
+}
+
+.parteB {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    padding: 10px;
+    
+}
+
+/* Seção com a imagem de fundo */
+.background-section {
+    display: flex;
+    position: relative; /* Necessário para o posicionamento do pseudo-elemento */
+    overflow: hidden; /* Garante que o pseudo-elemento não se expanda além da seção */
+}
+
+.background-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Define a opacidade da imagem de fundo */
+    z-index: 0; /* Garante que o pseudo-elemento esteja atrás do conteúdo */
+}
+
+/* Seção específica com a primeira imagem de fundo */
+.background-section.section1::before {
+    background-image: url('../img/fundo1.jpg'); /* Caminho relativo ao arquivo CSS */
+    opacity: 0.5;
+}
+
+/* Seção específica com a segunda imagem de fundo */
+.background-section.section2::before {
+    background-image: url('../img/fundo2.jpg'); /* Caminho relativo ao arquivo CSS */
+    opacity: 0.7;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.item {
+    background-color: transparent;
+    width: 22%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+.item img {
+    max-width: 50%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.item-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 0;
+    padding: 0;
+    border: none;
+}
+.item-text {
+    margin-top: 8px;
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+}
+
+.card-container4 {
+    display: flex!important;
+    flex-wrap: wrap!important;
+    gap: 60px!important; /* Aumenta o espaço entre os cards */
+    justify-content: space-around!important;
+}
+
+.custom-card {
+background-color: rgba(54, 113, 124, 0.7) !important;
+flex: 1 1 calc(30% - 20px) !important; /* Diminuir o tamanho dos cards e ajustar para o espaço */
+padding: 5px!important;
+max-width: 300px;
+margin: 10px!important;
+border-radius: 8px!important;
+color: rgb(0, 0, 0)!important;
+text-align: center!important;
+box-sizing: border-box!important;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.custom-card img {
+max-width: 40%!important;
+height: auto!important;
+border-radius: 8px 8px 0 0!important;
+}
+
+.custom-card .card-text {
+font-family: 'Open Sans', sans-serif !important;
+padding: 16px 0 !important;
+}
+
+/* sombra mockup */
+.sombra {
+    
+    overflow: hidden; /* Garante que a sombra não saia dos limites */
+}
+
+.sombra img{
+    
+    
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%); /* Define a forma da sombra */
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.4)); /* Adiciona a sombra na parte inferior */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    position: relative;
+    padding-left: 30px; /* Espaço para o "checkbox" */
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    
+    width: 20px; /* Tamanho do "checkbox" */
+    height: 20px; /* Tamanho do "checkbox" */
+    border: 1px solid #ccc; /* Borda do "checkbox" */
+    background-color: #fff; /* Cor de fundo do "checkbox" */
+    content: '\2714'; /* Código Unicode para o símbolo de check ✔ */
+    text-align: center;
+    font-size: 20px; /* Tamanho do símbolo de check */
+    line-height: 20px; /* Alinha verticalmente o símbolo de check */
+    color: green; /* Cor do símbolo de check */
+}
+
+.carousel-inner .carousel-item .col-md-3 img {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Define a sombra */
+    max-height: 100%;
+}
+
+   /* Estilo padrão */
+   .responsive-header {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* Ocultar elementos apenas em telas menores que 768px */
+
+.d-sm-block {
+    display:none;
+}
+
+/* Estilos para telas menores que 768px */
+@media (max-width: 768px) {
+    .responsive-header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .video-placeholder {
+        max-width: 90%;
+    }
+    .item {
+        width: 80% !important; /* Dois itens lado a lado */
+        margin-bottom: 20px; /* Espaço entre as linhas de itens */
+    }
+    .hide-on-small {
+        display: none !important;
+    }
+    .show-on-small {
+        display: block !important;
+                margin: 0 auto;
+                text-align: center;
+    }
+    .carousel-inner .row {
+        justify-content: center; /* Centraliza os itens no slide */
+    }
+}
+
+/* Estilos para telas menores que 480px */
+@media (max-width: 480px) {
+    .responsive-header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .video-placeholder {
+        max-width: 80%;
+    }
+    .item {
+        width: 80% !important;/* Um item por linha */
+        margin-bottom: 20px; /* Espaço entre os itens */
+    }
+    .hide-on-small {
+        display: none !important;
+    }
+    .show-on-small {
+        display: block !important;
+        text-align: center;
+    }
+    .carousel-inner .row {
+        justify-content: center; /* Centraliza os itens no slide */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .d-none-sm {
+        display: none !important;
+    }
+    .d-block-sm {
+        display: block !important;
+    }
+    .carousel-item {
+        display: none; /* Oculta todos os slides por padrão */
+    }
+    .carousel-item.d-block-sm {
+        display: block; /* Exibe apenas os slides com a classe d-block-sm */
+    }
+}
+
+/* Exibir slides para telas médias e grandes */
+@media (min-width: 769px) {
+    .d-none-md {
+        display: none !important;
+    }
+    .d-block-md {
+        display: block !important;
+    }
+}
